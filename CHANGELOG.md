@@ -1,6 +1,19 @@
 Changelog
 =========
 
+### 2012-01-09
+* [BC break] Removed `AdvancedPathUserResponse` & `AdvancedUserResponseInterface`
+* [BC break] Added `UserResponseInterface#getEmail()` & `UserResponseInterface#getProfilePicture()`
+  methods
+* [BC break] `PathUserResponse#setPaths()` method no longer overwrite default paths
+* [BC break] `PathUserResponse#getPath()` method no longer throws an exception if path
+  not exists
+* [BC break] `PathUserResponse#getValueForPath()` removed second argument from this method,
+  it will not throw exception anymore if response or value is missing, but now will return
+  `null` instead
+* Added `AbstractResourceOwner#addOptions()` method which allows easy overwriting resource
+  specific options
+
 ### 2012-08-27
 * Added `UserResponseInterface#getRealName()` method, also a new default path `realname`
   was added, this path holds the real name of user
