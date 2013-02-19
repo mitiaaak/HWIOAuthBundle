@@ -185,6 +185,10 @@ class Configuration implements ConfigurationInterface
                             ->useAttributeAsKey('name')
                             ->prototype('scalar')->end()
                         ->end()
+                        ->arrayNode('options')
+                            ->useAttributeAsKey('name')
+                            ->prototype('scalar')->end()
+                        ->end()
                     ->end()
                     ->validate()
                         ->ifTrue(function($c) {
